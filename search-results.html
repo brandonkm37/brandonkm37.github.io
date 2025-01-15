@@ -74,10 +74,14 @@
       // Check if the input is not empty
       if (sku) {
         // Construct the URL using the input value
-        const url = `https://www.stockx.com/search?s=${encodeURIComponent(sku)}`;
+        const url = `https://stockx.com/search?s=${encodeURIComponent(sku)}`;
+        const url2 = `https://www.goat.com/search?query=${encodeURIComponent(sku)}`;
         
-        // Open the URL in the same tab
-        window.location.href = url;
+        // Open the StockX URL in the same tab
+        window.open(url, '_blank') = url;
+
+        // Open the GOAT URL in the same tab
+        window.open(url2, '_blank') = url2;
 
         // Alternatively, to open in a new tab:
         // window.open(url, '_blank');
