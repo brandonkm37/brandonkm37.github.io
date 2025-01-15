@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Specifies the document type as HTML5 -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+  <title>Grails4Me</title> <!-- Sets the title of the web page -->
+
+  <!-- Internal CSS styles for the page -->
+  <style>
+    /* Styles for the clickable article links */
+    .article-link {
+      display: block; /* Makes the entire element block-level for full-width clicks */
+      margin: 10px 0; /* Adds vertical spacing between articles */
+      padding: 10px; /* Adds space inside the article block */
+      background-color: #f9f9f9; /* Sets a light background color */
+      border: 1px solid #ddd; /* Adds a light gray border around the article */
+      text-decoration: none; /* Removes the underline from the link */
+      color: #333; /* Sets the text color to dark gray */
+      border-radius: 5px; /* Rounds the corners of the block */
+      transition: background-color 0.3s; /* Smoothly changes the background color on hover */
+    }
+    
+    /* Hover effect for the article links */
+    .article-link:hover {
+      background-color: #eaeaea; /* Changes the background color when the mouse is over the link */
+    }
+
+    .search-bar {
+      display: flex; /* Makes input and button align horizontally */
+      margin-top: 10px; /* Adds spacing above the search bar */
+    }
+    .search-bar input {
+      flex: 1; /* Makes the input field take up available space */
+      padding: 8px; /* Adds padding inside the input */
+      border: 1px solid #ddd; /* Adds a light border around the input */
+      border-radius: 5px 0 0 5px; /* Rounds the left corners */
+    }
+    .search-bar button {
+      padding: 8px 15px; /* Adds padding inside the button */
+      border: 1px solid #ddd; /* Matches the input's border */
+      background-color: #007BFF; /* Sets the button's background color */
+      color: white; /* Sets the button's text color */
+      border-radius: 0 5px 5px 0; /* Rounds the right corners */
+      cursor: pointer; /* Changes the cursor to a pointer on hover */
+    }
+    .search-bar button:hover {
+      background-color: #0056b3; /* Darkens the button on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Main heading of the page -->
+  <h1>Grails4Me</h1>
+  
+  <!-- Clickable article with a search bar -->
+  <a href="product-details.html" class="article-link">
+    <h2>Product Title</h2> <!-- Title of the product -->
+    <p>Input SKU: </p> <!-- SKU information for the product -->
+
+</a>  
+    <!-- Search bar inside the article -->
+    <form class="search-bar" action="search-results.html" method="get">
+        <input type="text" name="sku" placeholder="Search SKU..." /> <!-- Input field for the SKU -->
+        <button type="submit">Search</button> <!-- Submit button -->
+    </form>
+
+</body>
+</html>
+
