@@ -1,1 +1,2 @@
-git add . && git commit -m "Updating" && git push
+Single Line for adding all files, commit, and push to repo. Steps will be sequential:
+git add . ; git commit -m "Updating" ; git push
