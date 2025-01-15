@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Specifies the document type as HTML5 -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+  <title>SKU Search</title> <!-- Sets the title of the web page -->
+
+  <!-- Internal CSS styles for the page -->
+  <style>
+    /* Styles for the clickable article links */
+    .article-link {
+      display: block; /* Makes the entire element block-level for full-width clicks */
+      margin: 10px 0; /* Adds vertical spacing between articles */
+      padding: 10px; /* Adds space inside the article block */
+      background-color: #f9f9f9; /* Sets a light background color */
+      border: 1px solid #ddd; /* Adds a light gray border around the article */
+      text-decoration: none; /* Removes the underline from the link */
+      color: #333; /* Sets the text color to dark gray */
+      border-radius: 5px; /* Rounds the corners of the block */
+      transition: background-color 0.3s; /* Smoothly changes the background color on hover */
+    }
+    
+    /* Hover effect for the article links */
+    .article-link:hover {
+      background-color: #eaeaea; /* Changes the background color when the mouse is over the link */
+    }
+  </style>
+</head>
+<body>
+  <!-- Main heading of the page -->
+  <h1>Search Results</h1>
+  
+  <!-- Clickable article linking to 'product-details.html' -->
+  <a href="product-details.html" class="article-link">
+    <h2>Product Title</h2> <!-- Title of the product -->
+    <p>SKU: 12345</p> <!-- SKU information for the product -->
+  </a>
+
+  <!-- Another clickable article linking to 'details-page.html' -->
+  <a href="details-page.html" class="article-link">
+    <h2>Another Product</h2> <!-- Title of another product -->
+    <p>SKU: 67890</p> <!-- SKU information for this product -->
+  </a>
+</body>
+</html>
+
