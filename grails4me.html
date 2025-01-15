@@ -4,7 +4,7 @@
   <!-- Specifies the document type as HTML5 -->
   <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
-  <title>SKU Search</title> <!-- Sets the title of the web page -->
+  <title>Grails4Me</title> <!-- Sets the title of the web page -->
 
   <!-- Internal CSS styles for the page -->
   <style>
@@ -25,22 +25,44 @@
     .article-link:hover {
       background-color: #eaeaea; /* Changes the background color when the mouse is over the link */
     }
+
+    .search-bar {
+      display: flex; /* Makes input and button align horizontally */
+      margin-top: 10px; /* Adds spacing above the search bar */
+    }
+    .search-bar input {
+      flex: 1; /* Makes the input field take up available space */
+      padding: 8px; /* Adds padding inside the input */
+      border: 1px solid #ddd; /* Adds a light border around the input */
+      border-radius: 5px 0 0 5px; /* Rounds the left corners */
+    }
+    .search-bar button {
+      padding: 8px 15px; /* Adds padding inside the button */
+      border: 1px solid #ddd; /* Matches the input's border */
+      background-color: #007BFF; /* Sets the button's background color */
+      color: white; /* Sets the button's text color */
+      border-radius: 0 5px 5px 0; /* Rounds the right corners */
+      cursor: pointer; /* Changes the cursor to a pointer on hover */
+    }
+    .search-bar button:hover {
+      background-color: #0056b3; /* Darkens the button on hover */
+    }
   </style>
 </head>
 <body>
   <!-- Main heading of the page -->
-  <h1>Search Results</h1>
+  <h1>Grails4Me</h1>
   
-  <!-- Clickable article linking to 'product-details.html' -->
+  <!-- Clickable article with a search bar -->
   <a href="product-details.html" class="article-link">
     <h2>Product Title</h2> <!-- Title of the product -->
     <p>SKU: 12345</p> <!-- SKU information for the product -->
-  </a>
-
-  <!-- Another clickable article linking to 'details-page.html' -->
-  <a href="details-page.html" class="article-link">
-    <h2>Another Product</h2> <!-- Title of another product -->
-    <p>SKU: 67890</p> <!-- SKU information for this product -->
+    
+    <!-- Search bar inside the article -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search SKU..." /> <!-- Input field for the search -->
+      <button type="button">Search</button> <!-- Search button -->
+    </div>
   </a>
 </body>
 </html>
