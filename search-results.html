@@ -74,7 +74,7 @@
       // Check if the input is not empty
       if (sku) {
         // Construct the URL using the input value
-        const url = `https://www.stockx.com/search?sku=${encodeURIComponent(sku)}`;
+        const url = `https://www.stockx.com/search?s=${encodeURIComponent(sku)}`;
         
         // Open the URL in the same tab
         window.location.href = url;
