@@ -59,10 +59,10 @@
     <p>Input SKU: </p> <!-- SKU information for the product -->
     
     <!-- Search bar inside the article -->
-    <div class="search-bar">
-      <input type="text" placeholder="Search SKU..." /> <!-- Input field for the search -->
-      <button type="button">Search</button> <!-- Search button -->
-    </div>
+    <form class="search-bar" action="search-results.html" method="get">
+        <input type="text" name="sku" placeholder="Search SKU..." /> <!-- Input field for the SKU -->
+        <button type="submit">Search</button> <!-- Submit button -->
+    </form>
   </a>
 </body>
 </html>
