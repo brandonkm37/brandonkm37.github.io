@@ -95,18 +95,21 @@
         // Wait for the page to load completely
         // For Flight Club to Click Element
         window.onload = function () {
+    // Delay execution by 3 seconds (3000 milliseconds)
+      setTimeout(function () {
         // Use querySelector to find the element with the specified attributes
         const priceElement = document.querySelector('[data-qa="ProductItemPrice"][data-testid="gridItemPrice"]');
 
         // Check if the element exists
         if (priceElement) {
-        // Simulate a click on the element
+          // Simulate a click on the element
           priceElement.click();
           console.log("Clicked on the price element.");
         } else {
           console.log("Price element not found.");
         }
-        };
+      }, 3000); // Adjust the delay time as needed
+    };
 
 
         
