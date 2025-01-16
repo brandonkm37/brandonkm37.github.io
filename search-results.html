@@ -60,43 +60,32 @@
       padding: 10px; /* Optional: adds padding for spacing */
     }
 
-    /* Each iframe container */
+    /* Style for the iframe containers */
     .iframe-container {
-      /*flex: 1 1 calc(50% - 20px); /* Each iframe takes 50% of the row, minus the gap */
-      /*max-width: calc(50% - 20px); /* Ensures they don’t exceed 50% of the row */
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-      box-sizing: border-box; /* Includes padding and border in width calculation */
+      display: block; /* Ensures iframe takes up full width */
+      width: 100%; /* Makes iframe stretch to 100% of the container */
+      height: 400px; /* Sets height of iframe */
+      border: none; /* Removes default iframe border */
+      margin-bottom: 20px; /* Adds space below each iframe */
+      box-sizing: border-box; /* Ensures padding/border are included in the width */
     }
 
-    /* The iframe itself */
-    .iframe {
-      width: 100%; /* Full width of the container */
-      height: 100%; /* Height can be adjusted */
-      border: none;
-    }
-
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 768px) {
-      .iframe-container {
-        flex: 1 1 100%; /* Each iframe takes 100% of the row on smaller devices */
-        max-width: 100%; /* Ensures full width */
-      }
-    }
-
+    /* Style for the dynamic button */
     .dynamic-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: rgb(255, 0, 0);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      display: none; /* Hidden by default */
+      display: block; /* Makes the button a block element (on its own line) */
+      width: 100%; /* Full-width button */
+      padding: 10px; /* Adds padding inside the button */
+      text-align: center; /* Centers the text inside the button */
+      background-color: #007BFF; /* Button background color */
+      color: white; /* Button text color */
+      text-decoration: none; /* Removes underline from the link */
+      font-size: 16px; /* Font size for the button text */
+      border-radius: 5px; /* Rounds the corners of the button */
+      margin-bottom: 30px; /* Adds space below the button */
     }
+
     .dynamic-button:hover {
-      background-color: #218838;
+      background-color: #0056b3; /* Darkens button on hover */
     }
 
   </style>
