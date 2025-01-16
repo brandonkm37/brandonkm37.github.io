@@ -66,7 +66,7 @@
       margin-top: 20px;
       padding: 10px 20px;
       background-color: #28a745;
-      color: white;
+      color: rgb(255, 0, 0);
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -96,7 +96,7 @@
 
   <div class="iframe-container">
     <iframe id="previewIframe" src="" title="URL Preview"></iframe>
-    <button type="button" onclick="generateUrl()">Go Here</button>
+    <button type="button" onclick="generateUrl()">Link</button>
   </div>
 
 
@@ -145,7 +145,7 @@
           iframe.src = url7; // Set the iframe's src attribute
           function generateUrl() {
             // Get the value of the SKU input
-            const sku = document.getElementById('skuInput').value.trim();
+            //const sku = document.getElementById('skuInput').value.trim();
 
             // Check if the SKU is not empty
             if (sku) {
