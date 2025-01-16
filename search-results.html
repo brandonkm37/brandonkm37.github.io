@@ -96,10 +96,15 @@
         const url2 = `https://www.goat.com/search?query=${encodeURIComponent(sku)}`;
         const url3 = `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(sku)}&_sacat=0&_from=R40&rt=nc&LH_AV=1`;
         const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}`;
+        
         const url5 = `https://undefeated.com/search?q=${encodeURIComponent(sku)}`;
         const url6 = `https://sneakerpolitics.com/collections/shop?q=${encodeURIComponent(sku)}`;
+        const url7 = `https://shopnicekicks.com/search?q=${encodeURIComponent(sku)}`;
+        const url8 = `https://www.socialstatuspgh.com/search?q=${encodeURIComponent(sku)}`;
+        const url9 = `https://www.a-ma-maniere.com/search?q=${encodeURIComponent(sku)}`;
+        const url10 = `https://www.lapstoneandhammer.com/search?q=${encodeURIComponent(sku)}`;
+        const url11 = `https://artsandrecstore.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=${encodeURIComponent(sku)}`;
 
-        
         const iframe = document.getElementById('previewIframe');
 
         // Open the StockX URL in a new tab
@@ -115,10 +120,10 @@
         window.open(url4, '_blank');
         
         // JavaScript if else statment to update the iframe's URL
-        if (url6) {
+        if (url7) {
         // Validate the URL (basic check for http or https)
-        if (url6.startsWith('http://') || url6.startsWith('https://')) {
-          iframe.src = url6; // Set the iframe's src attribute
+        if (url7.startsWith('http://') || url7.startsWith('https://')) {
+          iframe.src = url7; // Set the iframe's src attribute
         } else {
           alert('Please enter a valid URL (starting with http:// or https://).');
         }
