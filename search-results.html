@@ -56,7 +56,7 @@
       overflow: hidden; /* Ensures no content spills outside */
     }
 
-    iframe {
+    .iframe {
       width: 100%; /* Makes the iframe take up the full width of its container */
       height: 400px; /* Sets the height of the iframe */
       border: none; /* Removes the default iframe border */
@@ -130,6 +130,12 @@
     <a id="dynamicButton10" class="dynamic-button" target="_blank">Go to Product</a>
   </div>
 
+  <div class="iframe-container">
+    <iframe id="previewIframe11" src="" title="URL Preview"></iframe>
+    <!-- <button type="button" onclick="generateUrl()">Link</button> -->
+    <a id="dynamicButton11" class="dynamic-button" target="_blank">Go to Product</a>
+  </div>
+
 
 
 
@@ -155,13 +161,13 @@
         const url10 = `https://www.lapstoneandhammer.com/search?q=${encodeURIComponent(sku)}`;
         const url11 = `https://artsandrecstore.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=${encodeURIComponent(sku)}`;
 
-        const iframe5 = document.getElementById('previewIframe');
-        const iframe6 = document.getElementById('previewIframe');
-        const iframe7 = document.getElementById('previewIframe');
-        const iframe8 = document.getElementById('previewIframe');
-        const iframe9 = document.getElementById('previewIframe');
-        const iframe10 = document.getElementById('previewIframe');
-        const iframe11 = document.getElementById('previewIframe');
+        const iframe5 = document.getElementById('previewIframe5');
+        const iframe6 = document.getElementById('previewIframe6');
+        const iframe7 = document.getElementById('previewIframe7');
+        const iframe8 = document.getElementById('previewIframe8');
+        const iframe9 = document.getElementById('previewIframe9');
+        const iframe10 = document.getElementById('previewIframe10');
+        const iframe11 = document.getElementById('previewIframe11');
 
 
         // Open the StockX URL in a new tab
