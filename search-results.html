@@ -95,11 +95,42 @@
   </div>
 
   <div class="iframe-container">
-    <iframe id="previewIframe" src="" title="URL Preview"></iframe>
-    <button type="button" onclick="generateUrl()">Link</button>
+    <iframe id="previewIframe5" src="" title="URL Preview"></iframe>
+    <!-- <button type="button" onclick="generateUrl()">Link</button> -->
+    <a id="dynamicButton5" class="dynamic-button" target="_blank">Go to Product</a>
   </div>
 
-  <a id="dynamicButton5" class="dynamic-button" target="_blank">Go to Product</a>
+  <div class="iframe-container">
+    <iframe id="previewIframe6" src="" title="URL Preview"></iframe>
+    <!-- <button type="button" onclick="generateUrl()">Link</button> -->
+    <a id="dynamicButton6" class="dynamic-button" target="_blank">Go to Product</a>
+  </div>
+
+  <div class="iframe-container">
+    <iframe id="previewIframe7" src="" title="URL Preview"></iframe>
+    <!-- <button type="button" onclick="generateUrl()">Link</button> -->
+    <a id="dynamicButton7" class="dynamic-button" target="_blank">Go to Product</a>
+  </div>
+
+  <div class="iframe-container">
+    <iframe id="previewIframe8" src="" title="URL Preview"></iframe>
+    <!-- <button type="button" onclick="generateUrl()">Link</button> -->
+    <a id="dynamicButton8" class="dynamic-button" target="_blank">Go to Product</a>
+  </div>
+
+  <div class="iframe-container">
+    <iframe id="previewIframe9" src="" title="URL Preview"></iframe>
+    <!-- <button type="button" onclick="generateUrl()">Link</button> -->
+    <a id="dynamicButton9" class="dynamic-button" target="_blank">Go to Product</a>
+  </div>
+
+  <div class="iframe-container">
+    <iframe id="previewIframe10" src="" title="URL Preview"></iframe>
+    <!-- <button type="button" onclick="generateUrl()">Link</button> -->
+    <a id="dynamicButton10" class="dynamic-button" target="_blank">Go to Product</a>
+  </div>
+
+
 
 
   <script>
@@ -124,18 +155,21 @@
         const url10 = `https://www.lapstoneandhammer.com/search?q=${encodeURIComponent(sku)}`;
         const url11 = `https://artsandrecstore.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=${encodeURIComponent(sku)}`;
 
-        const iframe = document.getElementById('previewIframe');
-        
+        const iframe5 = document.getElementById('previewIframe');
+        const iframe6 = document.getElementById('previewIframe');
+        const iframe7 = document.getElementById('previewIframe');
+        const iframe8 = document.getElementById('previewIframe');
+        const iframe9 = document.getElementById('previewIframe');
+        const iframe10 = document.getElementById('previewIframe');
+        const iframe11 = document.getElementById('previewIframe');
+
 
         // Open the StockX URL in a new tab
         window.open(url, '_blank');
-
         // Open the GOAT URL in a new tab
         window.open(url2, '_blank');
-
         // Open the eBay URL in a new tab
         window.open(url3, '_blank');
-
         // Open the Flight Club URL in a new tab
         window.open(url4, '_blank');
 
@@ -156,10 +190,16 @@
 
 
         // JavaScript if else statment to update the iframe's URL
-        if (url7) {
+        if (url5) {
         // Validate the URL (basic check for http or https)
-        if (url7.startsWith('http://') || url7.startsWith('https://')) {
-          iframe.src = url7; // Set the iframe's src attribute            
+        if (url5.startsWith('http://') || url5.startsWith('https://')) {
+          iframe5.src = url5; // Set the iframe's src attribute    
+          iframe6.src = url6;
+          iframe7.src = url7;
+          iframe8.src = url8;
+          iframe9.src = url9;
+          iframe10.src = url10;
+          iframe11.src = url11;       
         }
         } else {
           alert('Please enter a valid URL (starting with http:// or https://).');
