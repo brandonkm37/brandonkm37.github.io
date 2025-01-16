@@ -97,6 +97,9 @@
         const url3 = `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(sku)}&_sacat=0&_from=R40&rt=nc&LH_AV=1`;
         const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}`;
         const url5 = `https://undefeated.com/search?q=${encodeURIComponent(sku)}`;
+        const url6 = `https://sneakerpolitics.com/collections/shop?q=${encodeURIComponent(sku)}`;
+
+        
         const iframe = document.getElementById('previewIframe');
 
         // Open the StockX URL in a new tab
@@ -112,10 +115,10 @@
         window.open(url4, '_blank');
         
         // JavaScript if else statment to update the iframe's URL
-        if (url5) {
+        if (url6) {
         // Validate the URL (basic check for http or https)
-        if (url5.startsWith('http://') || url5.startsWith('https://')) {
-          iframe.src = url5; // Set the iframe's src attribute
+        if (url6.startsWith('http://') || url6.startsWith('https://')) {
+          iframe.src = url6; // Set the iframe's src attribute
         } else {
           alert('Please enter a valid URL (starting with http:// or https://).');
         }
