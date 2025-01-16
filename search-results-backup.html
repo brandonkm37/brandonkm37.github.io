@@ -49,29 +49,15 @@
       background-color: #0056b3; /* Darkens the button on hover */
     }
 
-    /* Main container for the two-pane layout */
-    .container {
-      display: flex; /* Creates a flex container */
-      height: 100vh; /* Full viewport height */
-      overflow: hidden; /* Prevents scrolling on the main container */
-    }
-
-    /* Left pane styles */
-    .left-pane {
-      flex: 1; /* Takes 1 part of the available width */
-      padding: 20px; /* Adds padding inside the left pane */
-      background-color: #f4f4f4; /* Light background color for contrast */
-      border-right: 1px solid #ddd; /* Divider between panes */
-      box-sizing: border-box; /* Includes padding/border in width calculation */
-      overflow-y: auto; /* Adds scrolling if content overflows vertically */
-    }
-
-    /* Right pane styles */
-    .right-pane {
-      flex: 3; /* Takes 3 parts of the available width */
-      padding: 20px; /* Adds padding inside the right pane */
-      overflow-y: auto; /* Makes the right pane scrollable */
-      box-sizing: border-box; /* Includes padding/border in width calculation */
+    /* Wrapper for all iframe containers */
+    .iframe-wrapper {
+      display: flex; /* Enables flexbox layout */
+      flex-wrap: wrap; /* Allows items to wrap to the next row if they don't fit */
+      gap: 20px; /* Adds space between the elements */
+      justify-content: space-between; /* Distributes items evenly with space between */
+      margin: 0 auto; /* Centers the content */
+      max-width: 1200px; /* Optional: limits the width of the container */
+      padding: 10px; /* Optional: adds padding for spacing */
     }
 
     /* Style for the iframe containers */
@@ -102,56 +88,42 @@
       background-color: #0056b3; /* Darkens button on hover */
     }
 
-    /* Responsive layout for smaller screens */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column; /* Stacks panes vertically */
-      }
-
-      .left-pane, .right-pane {
-        flex: none; /* Resets flex properties */
-        width: 100%; /* Full width for both panes */
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- Main container for the layout -->
-  <div class="container">
-    <!-- Left Pane: Search Section -->
-    <div class="left-pane">
-      <!-- Main heading of the page -->
-      <h1>Grails4Me</h1>
-      
-      <!-- Clickable article with a search bar -->
-      <a href="product-details.html" class="article-link">
-        <h2>Find Grails...</h2> <!-- Title of the product -->
-        <p>Input SKU or Sneaker Name: </p> <!-- SKU information for the product -->
-      </a>  
-      
-      <!-- Search bar -->
-      <div class="search-bar">
-        <input type="text" id="skuInput" placeholder="Enter SKU..." /> <!-- Input field for SKU -->
-        <button type="button" onclick="searchSku()">Search</button> <!-- Search button -->
-      </div>
-    </div>
+  <!-- Main heading of the page -->
+  <h1>Grails4Me</h1>
+  
+  <!-- Clickable article with a search bar -->
+  <a href="product-details.html" class="article-link">
+    <h2>Find Grails...</h2> <!-- Title of the product -->
+    <p>Input SKU or Sneaker Name: </p> <!-- SKU information for the product -->
 
-    <!-- Right Pane: Scrollable iframe section -->
-    <div class="right-pane">
-      <iframe class="iframe-container" id="previewIframe5" src="" title="URL Preview"></iframe>
-      <a id="dynamicButton5" class="dynamic-button" target="_blank">Go to Product</a>
-
-      <iframe class="iframe-container" id="previewIframe6" src="" title="URL Preview"></iframe>
-      <a id="dynamicButton6" class="dynamic-button" target="_blank">Go to Product</a>
-
-      <iframe class="iframe-container" id="previewIframe7" src="" title="URL Preview"></iframe>
-      <a id="dynamicButton7" class="dynamic-button" target="_blank">Go to Product</a>
-
-      <iframe class="iframe-container" id="previewIframe8" src="" title="URL Preview"></iframe>
-      <a id="dynamicButton8" class="dynamic-button" target="_blank">Go to Product</a>
-    </div>
+</a>  
+    <!-- Search bar -->
+  <div class="search-bar">
+    <input type="text" id="skuInput" placeholder="Enter SKU..." /> <!-- Input field for SKU -->
+    <button type="button" onclick="searchSku()">Search</button> <!-- Search button -->
   </div>
 
+  
+  <iframe class="iframe-container" id="previewIframe5" src="" title="URL Preview"></iframe>
+  <a id="dynamicButton5" class="dynamic-button" target="_blank">Go to Product</a>
+
+  <iframe class="iframe-container" id="previewIframe6" src="" title="URL Preview"></iframe>
+  <a id="dynamicButton6" class="dynamic-button" target="_blank">Go to Product</a>
+
+  <iframe class="iframe-container" id="previewIframe7" src="" title="URL Preview"></iframe>
+  <a id="dynamicButton7" class="dynamic-button" target="_blank">Go to Product</a>
+
+  <iframe class="iframe-container" id="previewIframe8" src="" title="URL Preview"></iframe>
+  <a id="dynamicButton8" class="dynamic-button" target="_blank">Go to Product</a>
+
+
+
+
+
+  <script>
     // JavaScript function to handle the search
     function searchSku() {
       // Get the value of the input field
