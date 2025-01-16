@@ -138,35 +138,29 @@
 
         // Open the Flight Club URL in a new tab
         window.open(url4, '_blank');
+
+
         
+        //Making dynamic URL button show and attached to the previewed link
+        const dynamicUrl = url7;              
+        // Get the button element
+        const dynamicButton = document.getElementById('dynamicButton');        
+        // Set the href attribute of the button
+        dynamicButton.href = dynamicUrl;
+        // Update the button text (optional)
+        dynamicButton.textContent = `View Product: ${sku}`;       
+        // Show the button
+        dynamicButton.style.display = 'inline-block';
+        
+
+
+
         // JavaScript if else statment to update the iframe's URL
         if (url7) {
         // Validate the URL (basic check for http or https)
         if (url7.startsWith('http://') || url7.startsWith('https://')) {
-          iframe.src = url7; // Set the iframe's src attribute
-          window.open(url8, '_blank');
-          //function generateUrl() {
-            // Get the value of the SKU input
-            //const sku = document.getElementById('skuInput').value.trim();
-
-            // Check if the SKU is not empty
-            
-              // Construct the dynamic URL
-              const dynamicUrl = url7;
-              
-              // Get the button element
-              const dynamicButton = document.getElementById('dynamicButton');
-              
-              // Set the href attribute of the button
-              dynamicButton.href = dynamicUrl;
-
-              // Update the button text (optional)
-              dynamicButton.textContent = `View Product: ${sku}`;
-              
-              // Show the button
-              dynamicButton.style.display = 'inline-block';
-            
-    }
+          iframe.src = url7; // Set the iframe's src attribute            
+        }
         } else {
           alert('Please enter a valid URL (starting with http:// or https://).');
         }
