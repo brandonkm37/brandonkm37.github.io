@@ -61,6 +61,21 @@
       height: 400px; /* Sets the height of the iframe */
       border: none; /* Removes the default iframe border */
     }
+
+    .dynamic-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none; /* Hidden by default */
+    }
+    .dynamic-button:hover {
+      background-color: #218838;
+    }
+
   </style>
 </head>
 <body>
@@ -81,7 +96,7 @@
 
   <div class="iframe-container">
     <iframe id="previewIframe" src="" title="URL Preview"></iframe>
-    <button type="button" onclick="url7" id="clickableBotton" src="button" title="Click to Go">Go Here</button>
+    <button type="button" onclick="generateUrl()">Go Here</button>
   </div>
 
 
@@ -128,7 +143,30 @@
         // Validate the URL (basic check for http or https)
         if (url7.startsWith('http://') || url7.startsWith('https://')) {
           iframe.src = url7; // Set the iframe's src attribute
-          const button = url7;
+          function generateUrl() {
+            // Get the value of the SKU input
+            const sku = document.getElementById('skuInput').value.trim();
+
+            // Check if the SKU is not empty
+            if (url7) {
+              // Construct the dynamic URL
+              const dynamicUrl = url7;
+              
+              // Get the button element
+              const dynamicButton = document.getElementById('dynamicButton');
+              
+              // Set the href attribute of the button
+              dynamicButton.href = dynamicUrl;
+
+              // Update the button text (optional)
+              dynamicButton.textContent = `View Product: ${sku}`;
+              
+              // Show the button
+              dynamicButton.style.display = 'inline-block';
+            } else {
+              alert('Please enter a SKU.');
+            }
+    }
         } else {
           alert('Please enter a valid URL (starting with http:// or https://).');
         }
