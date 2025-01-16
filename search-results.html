@@ -77,6 +77,7 @@
         const url = `https://stockx.com/search?s=${encodeURIComponent(sku)}`;
         const url2 = `https://www.goat.com/search?query=${encodeURIComponent(sku)}`;
         const url3 = `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(sku)}&_sacat=0&_from=R40&rt=nc&LH_AV=1`;
+        const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}`;
 
         // Open the StockX URL in a new tab
         window.open(url, '_blank');
@@ -86,6 +87,9 @@
 
         // Open the eBay URL in a new tab
         window.open(url3, '_blank');
+
+        // Open the Flight Club URL in a new tab
+        window.open(url4, '_blank');
 
         // Alternatively, to open in a new tab:
         // window.open(url, '_blank');
