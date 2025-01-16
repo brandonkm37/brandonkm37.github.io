@@ -79,6 +79,10 @@
     <button type="button" onclick="searchSku()">Search</button> <!-- Search button -->
   </div>
 
+  <div class="iframe-container">
+    <iframe id="previewIframe" src="" title="URL Preview"></iframe>
+  </div>
+
   <script>
     // JavaScript function to handle the search
     function searchSku() {
@@ -92,6 +96,7 @@
         const url2 = `https://www.goat.com/search?query=${encodeURIComponent(sku)}`;
         const url3 = `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(sku)}&_sacat=0&_from=R40&rt=nc&LH_AV=1`;
         const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}`;
+        const iframe = document.getElementById('previewIframe');
 
         // Open the StockX URL in a new tab
         window.open(url, '_blank');
@@ -105,13 +110,18 @@
         // Open the Flight Club URL in a new tab
         window.open(url4, '_blank');
         
-        <iframe 
-          src="https://www.flightclub.com" 
-          width="600" 
-          height="400" 
-          style="border: none;"
-          title="Preview">
-        </iframe>
+        // JavaScript if else statment to update the iframe's URL
+        if (urlz) {
+        // Validate the URL (basic check for http or https)
+        if (urlz.startsWith('http://') || urlz.startsWith('https://')) {
+          iframe.src = urlz; // Set the iframe's src attribute
+        } else {
+          alert('Please enter a valid URL (starting with http:// or https://).');
+        }
+      } else {
+        alert('Please enter a URL.');
+      }
+        
 
         
 
@@ -121,6 +131,10 @@
         alert('Please enter a SKU to search.'); // Alert the user if the input is empty
       }
     }
+
+  
+
+
   </script>
 
 
