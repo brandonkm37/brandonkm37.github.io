@@ -91,6 +91,23 @@
 
         // Open the Flight Club URL in a new tab
         window.open(url4, '_blank');
+        
+        // Wait for the page to load completely
+        // For Flight Club to Click Element
+        window.onload = function () {
+        // Use querySelector to find the element with the specified attributes
+        const priceElement = document.querySelector('[data-qa="ProductItemPrice"][data-testid="gridItemPrice"]');
+
+        // Check if the element exists
+        if (priceElement) {
+        // Simulate a click on the element
+          priceElement.click();
+          console.log("Clicked on the price element.");
+        } else {
+          console.log("Price element not found.");
+        }
+  };
+
 
         
 
@@ -102,22 +119,7 @@
     }
   </script>
 
-<script>
-  // Wait for the page to load completely
-  window.onload = function () {
-    // Use querySelector to find the element with the specified attributes
-    const priceElement = document.querySelector('[data-qa="ProductItemPrice"][data-testid="gridItemPrice"]');
 
-    // Check if the element exists
-    if (priceElement) {
-      // Simulate a click on the element
-      priceElement.click();
-      console.log("Clicked on the price element.");
-    } else {
-      console.log("Price element not found.");
-    }
-  };
-</script>
 
 </body>
 </html>
