@@ -109,7 +109,7 @@
         const url11 = `https://artsandrecstore.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=${encodeURIComponent(sku)}`;
 
         const iframe = document.getElementById('previewIframe');
-        const button = document.getElementById('clickableBotton');
+        
 
         // Open the StockX URL in a new tab
         window.open(url, '_blank');
@@ -128,7 +128,7 @@
         // Validate the URL (basic check for http or https)
         if (url7.startsWith('http://') || url7.startsWith('https://')) {
           iframe.src = url7; // Set the iframe's src attribute
-          button.src = url7; // Set the botton's src attribute
+          const button = url7;
         } else {
           alert('Please enter a valid URL (starting with http:// or https://).');
         }
