@@ -81,33 +81,19 @@
         const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}`;
 
         // Open the StockX URL in a new tab
-        //window.open(url, '_blank');
+        window.open(url, '_blank');
 
         // Open the GOAT URL in a new tab
-        //window.open(url2, '_blank');
+        window.open(url2, '_blank');
 
         // Open the eBay URL in a new tab
-        //window.open(url3, '_blank');
+        window.open(url3, '_blank');
 
         // Open the Flight Club URL in a new tab
         window.open(url4, '_blank');
         
         // Wait for the page to load completely
-        // For Flight Club to Click Element
-        window.onload = function () {
-        // Use querySelector to find the element with the specified attributes
-        const priceElement = document.querySelector('[data-qa="ProductItemPrice"][data-testid="gridItemPrice"]');
-
-        // Check if the element exists
-        if (priceElement) {
-        // Simulate a click on the element
-          priceElement.click();
-          console.log("Clicked on the price element.");
-        } else {
-          console.log("Price element not found.");
-        }
-        };
-
+        // For Flight Club to Click Elemen
 
         
 
