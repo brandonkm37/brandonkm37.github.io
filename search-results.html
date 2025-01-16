@@ -111,10 +111,10 @@
         window.open(url4, '_blank');
         
         // JavaScript if else statment to update the iframe's URL
-        if (urlz) {
+        if (url) {
         // Validate the URL (basic check for http or https)
-        if (urlz.startsWith('http://') || urlz.startsWith('https://')) {
-          iframe.src = urlz; // Set the iframe's src attribute
+        if (url.startsWith('http://') || url.startsWith('https://')) {
+          iframe.src = url; // Set the iframe's src attribute
         } else {
           alert('Please enter a valid URL (starting with http:// or https://).');
         }
