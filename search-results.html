@@ -132,6 +132,10 @@
           overflow-y: auto; /* Allow vertical scrolling inside each pane */
         }
       }
+
+      .radio-button {
+        color: blue
+      }
     </style>
   </head>
 <body>
@@ -152,13 +156,22 @@
       <div class="search-bar">
         <input type="text" id="skuInput" placeholder="Enter SKU..." /> <!-- Input field for SKU -->
         <button type="button" onclick="searchSku()">Search</button> <!-- Search button -->
-        <input type="radio" id="Shop Sites" name="drone" value="shop-sites" checked />
-        <label for="shop-sites">Shop Sites</label>
-        <input type="radio" id="Resell" name="drone" value="resell" checked />
-        <label for="resell">Resell</label>
-        <input type="radio" id="both" name="drone" value="both" checked />
-        <label for="both">Both</label>
       </div>
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="Shop Sites" name="drone" value="shop-sites" checked />
+      <label for="shop-sites">Shop Sites</label>      
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="Resell" name="drone" value="resell" checked />
+      <label for="resell">Resell</label>
+    </div>
+
+    <div class="radio-button">
+      <input type="radio" id="both" name="drone" value="both" checked />
+      <label for="both">Both</label>      
     </div>
 
     <!-- Right Pane: Scrollable iframe section -->
