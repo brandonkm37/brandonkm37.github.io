@@ -75,6 +75,7 @@
         box-sizing: border-box; /* Includes padding/border in width calculation */
         scrollbar-gutter: stable; /* Prevents the main page's scroll bar from overlapping */
         background-color: rgb(80, 18, 180);
+        justify-content: center; /* Centers the button vertically */
       }
 
       .right-pane {
@@ -107,6 +108,8 @@
         font-size: 16px; /* Font size for the button text */
         border-radius: 5px; /* Rounds the corners of the button */
         margin-bottom: 30px; /* Adds space below the button */
+        cursor: pointer; /* Changes cursor to pointer for hover effect */
+        transition: background-color 0.3s ease; /* Smooth hover effect */
       }
   
       .dynamic-button:hover {
