@@ -118,10 +118,17 @@
           overflow: hidden; /* Prevent scrolling of the container */
         }
   
-        .left-pane, .right-pane {
+        .left-pane {
           flex: none; /* Reset flex-grow and flex-shrink */
           width: 100%; /* Full width for both panes */
-          height: 50%; /* Adjust the height for each pane (can be customized) */
+          height: 15%; /* Adjust the height for each pane (can be customized) */
+          overflow-y: auto; /* Allow vertical scrolling inside each pane */
+        }
+
+       .right-pane {
+          flex: none; /* Reset flex-grow and flex-shrink */
+          width: 100%; /* Full width for both panes */
+          height: 85%; /* Adjust the height for each pane (can be customized) */
           overflow-y: auto; /* Allow vertical scrolling inside each pane */
         }
       }
