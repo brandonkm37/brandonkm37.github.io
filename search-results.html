@@ -70,9 +70,34 @@
       .right-pane {
         flex: 3; /* Takes 3 parts of the available width */
         padding: 20px; /* Adds padding inside the right pane */
+        position: relative; /*Allows positioning the scroll wheel */
         overflow-y: auto; /* Makes the right pane scrollable */
         box-sizing: border-box; /* Includes padding/border in width calculation */
       }
+
+      /* Scroll Wheel Styles */
+      .scroll-wheel {
+        position: absolute;
+        top: 10%;
+        right: 0;
+        width: 30px;
+        height: 80%;
+        background: #ddd;
+        border-radius: 15px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .scroll-thumb {
+        width: 100%;
+        height: 20%;
+        background: #007BFF;
+        border-radius: 15px;
+        position: relative;
+        top: 0;
+        transition: top 0.1s linear;
+      }
+
   
       /* Style for the iframe containers */
       .iframe-container {
@@ -160,8 +185,50 @@
       <a id="dynamicButton14" class="dynamic-button" target="_blank">Go to Product</a>
 
     </div>
+
+    <!-- On-Screen Scroll Wheel -->
+    <div class="scroll-wheel" id="scrollWheel">
+      <div class="scroll-thumb" id="scrollThumb"></div>
+    </div>
+
   </div>
 <script>
+    const rightPane = document.getElementById("rightPane");
+    const scrollWheel = document.getElementById("scrollWheel");
+    const scrollThumb = document.getElementById("scrollThumb");
+
+    // Update the scroll thumb position as the user scrolls
+    rightPane.addEventListener("scroll", () => {
+      const scrollRatio = rightPane.scrollTop / (rightPane.scrollHeight - rightPane.clientHeight);
+      scrollThumb.style.top = `${scrollRatio * 100}%`;
+    });
+
+    // Add drag functionality to the scroll thumb
+    let isDragging = false;
+
+    scrollThumb.addEventListener("mousedown", (event) => {
+      isDragging = true;
+      document.body.style.userSelect = "none"; // Disable text selection while dragging
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+      document.body.style.userSelect = "auto"; // Re-enable text selection
+    });
+
+    document.addEventListener("mousemove", (event) => {
+      if (!isDragging) return;
+
+      const wheelRect = scrollWheel.getBoundingClientRect();
+      const newThumbPosition = Math.min(
+        Math.max(0, event.clientY - wheelRect.top),
+        wheelRect.height - scrollThumb.offsetHeight
+      );
+      const scrollRatio = newThumbPosition / (wheelRect.height - scrollThumb.offsetHeight);
+      scrollThumb.style.top = `${newThumbPosition}px`;
+      rightPane.scrollTop = scrollRatio * (rightPane.scrollHeight - rightPane.clientHeight);
+    });
+
     // JavaScript function to handle the search
     function searchSku() {
       // Get the value of the input field
