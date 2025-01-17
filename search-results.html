@@ -261,6 +261,64 @@
             window.open(url3, '_blank');
             // Open the Flight Club URL in a new tab
             window.open(url4, '_blank');
+            //Making dynamic URL button show and attached to the previewed link
+            const dynamicUrl5 = url5;
+            const dynamicUrl6 = url6;
+            const dynamicUrl7 = url7;
+            const dynamicUrl8 = url8;
+            const dynamicUrl12 = url12;
+            const dynamicUrl13 = url13;
+            const dynamicUrl14 = url14;              
+            // Get the button element
+            const dynamicButton5 = document.getElementById('dynamicButton5');
+            const dynamicButton6 = document.getElementById('dynamicButton6');
+            const dynamicButton7 = document.getElementById('dynamicButton7');
+            const dynamicButton8 = document.getElementById('dynamicButton8');  
+            const dynamicButton12 = document.getElementById('dynamicButton12');
+            const dynamicButton13 = document.getElementById('dynamicButton13');
+            const dynamicButton14 = document.getElementById('dynamicButton14');      
+            // Set the href attribute of the button
+            dynamicButton5.href = dynamicUrl5;
+            dynamicButton6.href = dynamicUrl6;
+            dynamicButton7.href = dynamicUrl7;
+            dynamicButton8.href = dynamicUrl8;
+            dynamicButton12.href = dynamicUrl12;
+            dynamicButton13.href = dynamicUrl13;
+            dynamicButton14.href = dynamicUrl14;
+            // Update the button text (optional)
+            dynamicButton5.textContent = `Undefeated: ${sku}`; 
+            dynamicButton6.textContent = `Sneaker Politics: ${sku}`;
+            dynamicButton7.textContent = `Shop Nice Kicks: ${sku}`;
+            dynamicButton8.textContent = `Social Status: ${sku}`;    
+            dynamicButton12.textContent = `Kith: ${sku}`;
+            dynamicButton13.textContent = `Bodega: ${sku}`;
+            dynamicButton14.textContent = `Packer: ${sku}`;    
+            // Show the button
+            dynamicButton5.style.display = 'inline-block';
+            dynamicButton6.style.display = 'inline-block';
+            dynamicButton7.style.display = 'inline-block';
+            dynamicButton8.style.display = 'inline-block';
+            dynamicButton12.style.display = 'inline-block';
+            dynamicButton13.style.display = 'inline-block';
+            dynamicButton14.style.display = 'inline-block';
+
+            // JavaScript if else statment to update the iframe's URL
+            if (url5) {
+              // Validate the URL (basic check for http or https)
+              if (url5.startsWith('http://') || url5.startsWith('https://')) {
+                iframe5.src = url5; // Set the iframe's src attribute    
+                iframe6.src = url6;
+                iframe7.src = url7;
+                iframe8.src = url8;
+                iframe12.src = url12;
+                iframe13.src = url13;
+                iframe14.src = url14;
+        
+              }
+            } 
+            else {
+              alert('Please enter a valid URL (starting with http:// or https://).');
+            }
 
           }
           else if (selectedOption === 'resell') {
