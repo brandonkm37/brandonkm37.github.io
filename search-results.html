@@ -1,120 +1,120 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Specifies the document type as HTML5 -->
-  <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
-  <title>Grails4Me</title> <!-- Sets the title of the web page -->
-
-  <!-- Internal CSS styles for the page -->
-  <style>
-    /* Styles for the clickable article links */
-    .article-link {
-      display: block; /* Makes the entire element block-level for full-width clicks */
-      margin: 10px 0; /* Adds vertical spacing between articles */
-      padding: 10px; /* Adds space inside the article block */
-      background-color: #f9f9f9; /* Sets a light background color */
-      border: 1px solid #ddd; /* Adds a light gray border around the article */
-      text-decoration: none; /* Removes the underline from the link */
-      color: #333; /* Sets the text color to dark gray */
-      border-radius: 5px; /* Rounds the corners of the block */
-      transition: background-color 0.3s; /* Smoothly changes the background color on hover */
-    }
-    
-    /* Hover effect for the article links */
-    .article-link:hover {
-      background-color: #eaeaea; /* Changes the background color when the mouse is over the link */
-    }
-
-    .search-bar {
-      display: flex; /* Makes input and button align horizontally */
-      margin-top: 10px; /* Adds spacing above the search bar */
-    }
-    .search-bar input {
-      flex: 1; /* Makes the input field take up available space */
-      padding: 8px; /* Adds padding inside the input */
-      border: 1px solid #ddd; /* Adds a light border around the input */
-      border-radius: 5px 0 0 5px; /* Rounds the left corners */
-    }
-    .search-bar button {
-      padding: 8px 15px; /* Adds padding inside the button */
-      border: 1px solid #ddd; /* Matches the input's border */
-      background-color: #007BFF; /* Sets the button's background color */
-      color: white; /* Sets the button's text color */
-      border-radius: 0 5px 5px 0; /* Rounds the right corners */
-      cursor: pointer; /* Changes the cursor to a pointer on hover */
-    }
-    .search-bar button:hover {
-      background-color: #0056b3; /* Darkens the button on hover */
-    }
-
-    /* Main container for the two-pane layout */
-    .container {
-      display: flex; /* Creates a flex container */
-      height: 100vh; /* Full viewport height */
-      overflow: hidden; /* Prevents scrolling on the main container */
-    }
-
-    /* Left pane styles */
-    .left-pane {
-      flex: 1; /* Takes 1 part of the available width */
-      padding: 20px; /* Adds padding inside the left pane */
-      background-color: #f4f4f4; /* Light background color for contrast */
-      border-right: 1px solid #ddd; /* Divider between panes */
-      box-sizing: border-box; /* Includes padding/border in width calculation */
-      overflow-y: auto; /* Adds scrolling if content overflows vertically */
-    }
-
-    /* Right pane styles */
-    .right-pane {
-      flex: 3; /* Takes 3 parts of the available width */
-      padding: 20px; /* Adds padding inside the right pane */
-      overflow-y: auto; /* Makes the right pane scrollable */
-      box-sizing: border-box; /* Includes padding/border in width calculation */
-    }
-
-    /* Style for the iframe containers */
-    .iframe-container {
-      display: block; /* Ensures iframe takes up full width */
-      width: 100%; /* Makes iframe stretch to 100% of the container */
-      height: 400px; /* Sets height of iframe */
-      border: none; /* Removes default iframe border */
-      margin-bottom: 20px; /* Adds space below each iframe */
-      box-sizing: border-box; /* Ensures padding/border are included in the width */
-    }
-
-    /* Style for the dynamic button */
-    .dynamic-button {
-      display: block; /* Makes the button a block element (on its own line) */
-      width: 100%; /* Full-width button */
-      padding: 10px; /* Adds padding inside the button */
-      text-align: center; /* Centers the text inside the button */
-      background-color: #007BFF; /* Button background color */
-      color: white; /* Button text color */
-      text-decoration: none; /* Removes underline from the link */
-      font-size: 16px; /* Font size for the button text */
-      border-radius: 5px; /* Rounds the corners of the button */
-      margin-bottom: 30px; /* Adds space below the button */
-    }
-
-    .dynamic-button:hover {
-      background-color: #0056b3; /* Darkens button on hover */
-    }
-
-    /* Responsive layout for smaller screens */
-    @media (max-width: 768px) {
+  <head>
+    <!-- Specifies the document type as HTML5 -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <title>Grails4Me</title> <!-- Sets the title of the web page -->
+  
+    <!-- Internal CSS styles for the page -->
+    <style>
+      /* Styles for the clickable article links */
+      .article-link {
+        display: block; /* Makes the entire element block-level for full-width clicks */
+        margin: 10px 0; /* Adds vertical spacing between articles */
+        padding: 10px; /* Adds space inside the article block */
+        background-color: #f9f9f9; /* Sets a light background color */
+        border: 1px solid #ddd; /* Adds a light gray border around the article */
+        text-decoration: none; /* Removes the underline from the link */
+        color: #333; /* Sets the text color to dark gray */
+        border-radius: 5px; /* Rounds the corners of the block */
+        transition: background-color 0.3s; /* Smoothly changes the background color on hover */
+      }
+      
+      /* Hover effect for the article links */
+      .article-link:hover {
+        background-color: #eaeaea; /* Changes the background color when the mouse is over the link */
+      }
+  
+      .search-bar {
+        display: flex; /* Makes input and button align horizontally */
+        margin-top: 10px; /* Adds spacing above the search bar */
+      }
+      .search-bar input {
+        flex: 1; /* Makes the input field take up available space */
+        padding: 8px; /* Adds padding inside the input */
+        border: 1px solid #ddd; /* Adds a light border around the input */
+        border-radius: 5px 0 0 5px; /* Rounds the left corners */
+      }
+      .search-bar button {
+        padding: 8px 15px; /* Adds padding inside the button */
+        border: 1px solid #ddd; /* Matches the input's border */
+        background-color: #007BFF; /* Sets the button's background color */
+        color: white; /* Sets the button's text color */
+        border-radius: 0 5px 5px 0; /* Rounds the right corners */
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+      }
+      .search-bar button:hover {
+        background-color: #0056b3; /* Darkens the button on hover */
+      }
+  
+      /* Main container for the two-pane layout */
       .container {
-        flex-direction: column; /* Stacks panes vertically */
+        display: flex; /* Creates a flex container */
+        height: 100vh; /* Full viewport height */
+        overflow: hidden; /* Prevents scrolling on the main container */
       }
-
-      .left-pane, .right-pane {
-        flex: none; /* Resets flex properties */
-        width: 100%; /* Full width for both panes */
+  
+      /* Left pane styles */
+      .left-pane {
+        flex: 1; /* Takes 1 part of the available width */
+        padding: 20px; /* Adds padding inside the left pane */
+        background-color: #f4f4f4; /* Light background color for contrast */
+        border-right: 1px solid #ddd; /* Divider between panes */
+        box-sizing: border-box; /* Includes padding/border in width calculation */
+        overflow-y: auto; /* Adds scrolling if content overflows vertically */
       }
-    }
-  </style>
-</head>
+  
+      /* Right pane styles */
+      .right-pane {
+        flex: 3; /* Takes 3 parts of the available width */
+        padding: 20px; /* Adds padding inside the right pane */
+        overflow-y: auto; /* Makes the right pane scrollable */
+        box-sizing: border-box; /* Includes padding/border in width calculation */
+      }
+  
+      /* Style for the iframe containers */
+      .iframe-container {
+        display: block; /* Ensures iframe takes up full width */
+        width: 100%; /* Makes iframe stretch to 100% of the container */
+        height: 400px; /* Sets height of iframe */
+        border: none; /* Removes default iframe border */
+        margin-bottom: 20px; /* Adds space below each iframe */
+        box-sizing: border-box; /* Ensures padding/border are included in the width */
+      }
+  
+      /* Style for the dynamic button */
+      .dynamic-button {
+        display: block; /* Makes the button a block element (on its own line) */
+        width: 100%; /* Full-width button */
+        padding: 10px; /* Adds padding inside the button */
+        text-align: center; /* Centers the text inside the button */
+        background-color: #007BFF; /* Button background color */
+        color: white; /* Button text color */
+        text-decoration: none; /* Removes underline from the link */
+        font-size: 16px; /* Font size for the button text */
+        border-radius: 5px; /* Rounds the corners of the button */
+        margin-bottom: 30px; /* Adds space below the button */
+      }
+  
+      .dynamic-button:hover {
+        background-color: #0056b3; /* Darkens button on hover */
+      }
+  
+      /* Responsive layout for smaller screens */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column; /* Stacks panes vertically */
+        }
+  
+        .left-pane, .right-pane {
+          flex: none; /* Resets flex properties */
+          width: 100%; /* Full width for both panes */
+        }
+      }
+    </style>
+  </head>
 <body>
   <!-- Main container for the layout -->
   <div class="container">
