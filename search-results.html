@@ -71,9 +71,14 @@
         flex: 3; /* Takes 3 parts of the available width */
         padding: 20px; /* Adds padding inside the right pane */
         position: relative; /* Allows positioning of the scroll wheel */
-        overflow-y: auto; /* Makes the right pane scrollable */
+        /*overflow-y: auto; /* Makes the right pane scrollable */
         box-sizing: border-box; /* Includes padding/border in width calculation */
         scrollbar-gutter: stable; /* Prevents the main page's scroll bar from overlapping */
+      }
+
+      .right-pane {
+        height: calc(100vh - 50%); /* Ensure the right pane adjusts dynamically */
+        overflow-y: scroll; /* Ensure the right pane remains scrollable */
       }
 
   
@@ -109,12 +114,15 @@
       @media (max-width: 768px) {
         .container {
           flex-direction: column; /* Stacks panes vertically */
-          scrollbar-gutter: stable;
+          height: 100vh; /* Ensure full viewport height */
+          overflow: hidden; /* Prevent scrolling of the container */
         }
   
         .left-pane, .right-pane {
-          flex: none; /* Resets flex properties */
+          flex: none; /* Reset flex-grow and flex-shrink */
           width: 100%; /* Full width for both panes */
+          height: 50%; /* Adjust the height for each pane (can be customized) */
+          overflow-y: auto; /* Allow vertical scrolling inside each pane */
         }
       }
     </style>
