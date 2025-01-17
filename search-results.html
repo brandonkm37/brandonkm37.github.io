@@ -150,6 +150,11 @@
       .radio-button {
         color: blue
       }
+
+      .hidden {
+        display: none; /* Completely hides the element*/
+      }
+
     </style>
   </head>
 <body>
@@ -192,37 +197,37 @@
 
     <div class="right-pane">
       <!-- Right Pane: Scrollable iframe section -->
-      <div class="iframe-button-container">
+      <div class="iframe-button-container hidden">
         <iframe class="iframe-container" id="previewIframe5" src="" title="URL Preview"></iframe>
         <a id="dynamicButton5" class="dynamic-button" target="_blank">Go to Product</a>
       </div>
 
-      <div class="iframe-button-container">
+      <div class="iframe-button-container hidden">
         <iframe class="iframe-container" id="previewIframe6" src="" title="URL Preview"></iframe>
         <a id="dynamicButton6" class="dynamic-button" target="_blank">Go to Product</a>
       </div>
 
-      <div class="iframe-button-container">
+      <div class="iframe-button-container hidden">
         <iframe class="iframe-container" id="previewIframe7" src="" title="URL Preview"></iframe>
         <a id="dynamicButton7" class="dynamic-button" target="_blank">Go to Product</a>
       </div>
 
-      <div class="iframe-button-container">
+      <div class="iframe-button-container hidden">
         <iframe class="iframe-container" id="previewIframe8" src="" title="URL Preview"></iframe>
         <a id="dynamicButton8" class="dynamic-button" target="_blank">Go to Product</a>
       </div>
 
-      <div class="iframe-button-container">
+      <div class="iframe-button-container hidden">
         <iframe class="iframe-container" id="previewIframe12" src="" title="URL Preview"></iframe>
         <a id="dynamicButton12" class="dynamic-button" target="_blank">Go to Product</a>
       </div>
 
-      <div class="iframe-button-container">
+      <div class="iframe-button-container hidden">
         <iframe class="iframe-container" id="previewIframe13" src="" title="URL Preview"></iframe>
         <a id="dynamicButton13" class="dynamic-button" target="_blank">Go to Product</a>
       </div>
 
-      <div class="iframe-button-container">
+      <div class="iframe-button-container hidden">
         <iframe class="iframe-container" id="previewIframe14" src="" title="URL Preview"></iframe>
         <a id="dynamicButton14" class="dynamic-button" target="_blank">Go to Product</a>
       </div>
@@ -241,6 +246,12 @@
 
         // Check if the input is not empty
         if (sku) {
+          //Removes 'hidden' from .iframe-button-container classes, revealing the .iframe preview and corresponding buttons
+          const containers = document.querySelectorAll('.iframe-button-container');
+          containers.forEach(container => {
+            container.classList.remove('hidden');
+          });
+
           // Establishing all URLs...
           // Resell URLs: Construct the URL using the input value
           const url = `https://stockx.com/search?s=${encodeURIComponent(sku)}`;
