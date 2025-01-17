@@ -70,9 +70,10 @@
       .right-pane {
         flex: 3; /* Takes 3 parts of the available width */
         padding: 20px; /* Adds padding inside the right pane */
-        position: relative; /*Allows positioning the scroll wheel */
+        position: relative; /* Allows positioning of the scroll wheel */
         overflow-y: auto; /* Makes the right pane scrollable */
         box-sizing: border-box; /* Includes padding/border in width calculation */
+        scrollbar-gutter: stable; /* Prevents the main page's scroll bar from overlapping */
       }
 
   
