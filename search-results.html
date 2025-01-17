@@ -149,6 +149,16 @@
 
       <iframe class="iframe-container" id="previewIframe8" src="" title="URL Preview"></iframe>
       <a id="dynamicButton8" class="dynamic-button" target="_blank">Go to Product</a>
+
+      <iframe class="iframe-container" id="previewIframe12" src="" title="URL Preview"></iframe>
+      <a id="dynamicButton12" class="dynamic-button" target="_blank">Go to Product</a>
+
+      <iframe class="iframe-container" id="previewIframe13" src="" title="URL Preview"></iframe>
+      <a id="dynamicButton13" class="dynamic-button" target="_blank">Go to Product</a>
+
+      <iframe class="iframe-container" id="previewIframe14" src="" title="URL Preview"></iframe>
+      <a id="dynamicButton14" class="dynamic-button" target="_blank">Go to Product</a>
+
     </div>
   </div>
 <script>
@@ -169,15 +179,20 @@
         const url6 = `https://sneakerpolitics.com/collections/shop?q=${encodeURIComponent(sku)}`;
         const url7 = `https://shopnicekicks.com/search?q=${encodeURIComponent(sku)}`;
         const url8 = `https://www.socialstatuspgh.com/search?q=${encodeURIComponent(sku)}`;
-        const url9 = `https://www.a-ma-maniere.com/search?q=${encodeURIComponent(sku)}`;
-        const url10 = `https://www.lapstoneandhammer.com/search?q=${encodeURIComponent(sku)}`;
-        const url11 = `https://artsandrecstore.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=${encodeURIComponent(sku)}`;
+        //const url9 = `https://www.a-ma-maniere.com/search?q=${encodeURIComponent(sku)}`;
+        //const url10 = `https://www.lapstoneandhammer.com/search?q=${encodeURIComponent(sku)}`;
+        //const url11 = `https://artsandrecstore.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=${encodeURIComponent(sku)}`;
+        const url12 = `https://kith.com/pages/search-results-page?q=${encodeURIComponent(sku)}`;
+        const url13 = `https://bdgastore.com/search?q=${encodeURIComponent(sku)}`;
+        const url14 = `https://feature.com/pages/search-results-v-next?q=${encodeURIComponent(sku)}`;
 
         const iframe5 = document.getElementById('previewIframe5');
         const iframe6 = document.getElementById('previewIframe6');
         const iframe7 = document.getElementById('previewIframe7');
         const iframe8 = document.getElementById('previewIframe8');
-
+        const iframe12 = document.getElementById('previewIframe8');
+        const iframe13 = document.getElementById('previewIframe8');
+        const iframe14 = document.getElementById('previewIframe8');
 
         // Open the StockX URL in a new tab
         //window.open(url, '_blank');
@@ -194,27 +209,42 @@
         const dynamicUrl5 = url5;
         const dynamicUrl6 = url6;
         const dynamicUrl7 = url7;
-        const dynamicUrl8 = url8;              
+        const dynamicUrl8 = url8;
+        const dynamicUrl12 = url12;
+        const dynamicUrl13 = url13;
+        const dynamicUrl14 = url14;              
         // Get the button element
         const dynamicButton5 = document.getElementById('dynamicButton5');
         const dynamicButton6 = document.getElementById('dynamicButton6');
         const dynamicButton7 = document.getElementById('dynamicButton7');
-        const dynamicButton8 = document.getElementById('dynamicButton8');        
+        const dynamicButton8 = document.getElementById('dynamicButton8');  
+        const dynamicButton12 = document.getElementById('dynamicButton12');
+        const dynamicButton13 = document.getElementById('dynamicButton13');
+        const dynamicButton14 = document.getElementById('dynamicButton14');      
         // Set the href attribute of the button
         dynamicButton5.href = dynamicUrl5;
         dynamicButton6.href = dynamicUrl6;
         dynamicButton7.href = dynamicUrl7;
         dynamicButton8.href = dynamicUrl8;
+        dynamicButton12.href = dynamicUrl12;
+        dynamicButton13.href = dynamicUrl13;
+        dynamicButton14.href = dynamicUrl14;
         // Update the button text (optional)
         dynamicButton5.textContent = `Undefeated: ${sku}`; 
         dynamicButton6.textContent = `Sneaker Politics: ${sku}`;
         dynamicButton7.textContent = `Shop Nice Kicks: ${sku}`;
-        dynamicButton8.textContent = `Social Status: ${sku}`;      
+        dynamicButton8.textContent = `Social Status: ${sku}`;    
+        dynamicButton12.textContent = `Kith: ${sku}`;
+        dynamicButton13.textContent = `Bodega: ${sku}`;
+        dynamicButton14.textContent = `Feature: ${sku}`;    
         // Show the button
         dynamicButton5.style.display = 'inline-block';
         dynamicButton6.style.display = 'inline-block';
         dynamicButton7.style.display = 'inline-block';
         dynamicButton8.style.display = 'inline-block';
+        dynamicButton12.style.display = 'inline-block';
+        dynamicButton13.style.display = 'inline-block';
+        dynamicButton14.style.display = 'inline-block';
 
         // JavaScript if else statment to update the iframe's URL
         if (url5) {
@@ -224,6 +254,9 @@
           iframe6.src = url6;
           iframe7.src = url7;
           iframe8.src = url8;
+          iframe12.src = url12;
+          iframe13.src = url13;
+          iframe14.src = url14;
   
         }
         } else {
