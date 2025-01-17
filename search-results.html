@@ -159,17 +159,17 @@
       </div>
 
       <div class="radio-button">
-        <input type="radio" id="Shop Sites" name="drone" value="shop-sites" checked />
+        <input type="radio" id="Shop Sites" name="searchType" value="shop-sites" checked />
         <label for="shop-sites">Shop Sites</label>      
       </div>
   
       <div class="radio-button">
-        <input type="radio" id="Resell" name="drone" value="resell" checked />
+        <input type="radio" id="Resell" name="searchType" value="resell" checked />
         <label for="resell">Resell</label>
       </div>
   
       <div class="radio-button">
-        <input type="radio" id="both" name="drone" value="both" checked />
+        <input type="radio" id="both" name="searchType" value="both" checked />
         <label for="both">Both</label>      
       </div>
 
@@ -208,15 +208,18 @@
       function searchSku() {
         // Get the value of the input field
         const sku = document.getElementById('skuInput').value.trim();
-        
+
+        // Get the selected radio button value
+        const selectedOption = document.querySelector('input[name="searchType"]:checked').value;
+
         // Check if the input is not empty
         if (sku) {
+          // Establishing all URLs...
           // Resell URLs: Construct the URL using the input value
           const url = `https://stockx.com/search?s=${encodeURIComponent(sku)}`;
           const url2 = `https://www.goat.com/search?query=${encodeURIComponent(sku)}`;
           const url3 = `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(sku)}&_sacat=0&_from=R40&rt=nc&LH_AV=1`;
-          const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}`;
-          
+          const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}`;         
           //Shopify URLs
           const url5 = `https://undefeated.com/search?q=${encodeURIComponent(sku)}`;
           const url6 = `https://sneakerpolitics.com/collections/shop?q=${encodeURIComponent(sku)}`;
@@ -230,6 +233,7 @@
           const url14 = `https://packershoes.com/search?q=${encodeURIComponent(sku)}`;
           
 
+          // Creating a variable for preview frames 
           const iframe5 = document.getElementById('previewIframe5');
           const iframe6 = document.getElementById('previewIframe6');
           const iframe7 = document.getElementById('previewIframe7');
@@ -248,64 +252,89 @@
           //window.open(url4, '_blank');
 
 
+          if (selectedOption === 'Both'){
+            // Open the StockX URL in a new tab
+            window.open(url, '_blank');
+            // Open the GOAT URL in a new tab
+            window.open(url2, '_blank');
+            // Open the eBay URL in a new tab
+            window.open(url3, '_blank');
+            // Open the Flight Club URL in a new tab
+            window.open(url4, '_blank');
 
-          //Making dynamic URL button show and attached to the previewed link
-          const dynamicUrl5 = url5;
-          const dynamicUrl6 = url6;
-          const dynamicUrl7 = url7;
-          const dynamicUrl8 = url8;
-          const dynamicUrl12 = url12;
-          const dynamicUrl13 = url13;
-          const dynamicUrl14 = url14;              
-          // Get the button element
-          const dynamicButton5 = document.getElementById('dynamicButton5');
-          const dynamicButton6 = document.getElementById('dynamicButton6');
-          const dynamicButton7 = document.getElementById('dynamicButton7');
-          const dynamicButton8 = document.getElementById('dynamicButton8');  
-          const dynamicButton12 = document.getElementById('dynamicButton12');
-          const dynamicButton13 = document.getElementById('dynamicButton13');
-          const dynamicButton14 = document.getElementById('dynamicButton14');      
-          // Set the href attribute of the button
-          dynamicButton5.href = dynamicUrl5;
-          dynamicButton6.href = dynamicUrl6;
-          dynamicButton7.href = dynamicUrl7;
-          dynamicButton8.href = dynamicUrl8;
-          dynamicButton12.href = dynamicUrl12;
-          dynamicButton13.href = dynamicUrl13;
-          dynamicButton14.href = dynamicUrl14;
-          // Update the button text (optional)
-          dynamicButton5.textContent = `Undefeated: ${sku}`; 
-          dynamicButton6.textContent = `Sneaker Politics: ${sku}`;
-          dynamicButton7.textContent = `Shop Nice Kicks: ${sku}`;
-          dynamicButton8.textContent = `Social Status: ${sku}`;    
-          dynamicButton12.textContent = `Kith: ${sku}`;
-          dynamicButton13.textContent = `Bodega: ${sku}`;
-          dynamicButton14.textContent = `Packer: ${sku}`;    
-          // Show the button
-          dynamicButton5.style.display = 'inline-block';
-          dynamicButton6.style.display = 'inline-block';
-          dynamicButton7.style.display = 'inline-block';
-          dynamicButton8.style.display = 'inline-block';
-          dynamicButton12.style.display = 'inline-block';
-          dynamicButton13.style.display = 'inline-block';
-          dynamicButton14.style.display = 'inline-block';
+          }
+          else if (selectedOption === 'Resell') {
+            // Open the StockX URL in a new tab
+            window.open(url, '_blank');
+            // Open the GOAT URL in a new tab
+            window.open(url2, '_blank');
+            // Open the eBay URL in a new tab
+            window.open(url3, '_blank');
+            // Open the Flight Club URL in a new tab
+            window.open(url4, '_blank');
+          }
+          else if (selectedOption === 'Shop Sites') {
+            //Making dynamic URL button show and attached to the previewed link
+            const dynamicUrl5 = url5;
+            const dynamicUrl6 = url6;
+            const dynamicUrl7 = url7;
+            const dynamicUrl8 = url8;
+            const dynamicUrl12 = url12;
+            const dynamicUrl13 = url13;
+            const dynamicUrl14 = url14;              
+            // Get the button element
+            const dynamicButton5 = document.getElementById('dynamicButton5');
+            const dynamicButton6 = document.getElementById('dynamicButton6');
+            const dynamicButton7 = document.getElementById('dynamicButton7');
+            const dynamicButton8 = document.getElementById('dynamicButton8');  
+            const dynamicButton12 = document.getElementById('dynamicButton12');
+            const dynamicButton13 = document.getElementById('dynamicButton13');
+            const dynamicButton14 = document.getElementById('dynamicButton14');      
+            // Set the href attribute of the button
+            dynamicButton5.href = dynamicUrl5;
+            dynamicButton6.href = dynamicUrl6;
+            dynamicButton7.href = dynamicUrl7;
+            dynamicButton8.href = dynamicUrl8;
+            dynamicButton12.href = dynamicUrl12;
+            dynamicButton13.href = dynamicUrl13;
+            dynamicButton14.href = dynamicUrl14;
+            // Update the button text (optional)
+            dynamicButton5.textContent = `Undefeated: ${sku}`; 
+            dynamicButton6.textContent = `Sneaker Politics: ${sku}`;
+            dynamicButton7.textContent = `Shop Nice Kicks: ${sku}`;
+            dynamicButton8.textContent = `Social Status: ${sku}`;    
+            dynamicButton12.textContent = `Kith: ${sku}`;
+            dynamicButton13.textContent = `Bodega: ${sku}`;
+            dynamicButton14.textContent = `Packer: ${sku}`;    
+            // Show the button
+            dynamicButton5.style.display = 'inline-block';
+            dynamicButton6.style.display = 'inline-block';
+            dynamicButton7.style.display = 'inline-block';
+            dynamicButton8.style.display = 'inline-block';
+            dynamicButton12.style.display = 'inline-block';
+            dynamicButton13.style.display = 'inline-block';
+            dynamicButton14.style.display = 'inline-block';
 
-          // JavaScript if else statment to update the iframe's URL
-          if (url5) {
-          // Validate the URL (basic check for http or https)
-          if (url5.startsWith('http://') || url5.startsWith('https://')) {
-            iframe5.src = url5; // Set the iframe's src attribute    
-            iframe6.src = url6;
-            iframe7.src = url7;
-            iframe8.src = url8;
-            iframe12.src = url12;
-            iframe13.src = url13;
-            iframe14.src = url14;
-    
+            // JavaScript if else statment to update the iframe's URL
+            if (url5) {
+              // Validate the URL (basic check for http or https)
+              if (url5.startsWith('http://') || url5.startsWith('https://')) {
+                iframe5.src = url5; // Set the iframe's src attribute    
+                iframe6.src = url6;
+                iframe7.src = url7;
+                iframe8.src = url8;
+                iframe12.src = url12;
+                iframe13.src = url13;
+                iframe14.src = url14;
+        
+              }
+            } 
+            else {
+              alert('Please enter a valid URL (starting with http:// or https://).');
+            }
           }
-          } else {
-            alert('Please enter a valid URL (starting with http:// or https://).');
-          }
+
+
         } else {
           alert('Please enter a URL.');
         }
