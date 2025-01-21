@@ -207,6 +207,11 @@
         display: none; /* Completely hides the element*/
       }
 
+      select {
+        font-size: 0.9rem;
+        padding: 2px 5px;
+      }
+
     </style>
   </head>
 <body>
@@ -227,6 +232,29 @@
       <div class="search-bar">
         <input type="text" id="skuInput" placeholder="Enter SKU..." /> <!-- Input field for SKU -->
         <button type="button" onclick="searchSku()">Search</button> <!-- Search button -->
+      </div>
+
+      <!-- Size Entry Selector -->
+      <div class="select">
+        <label for="size-select">Size:</label>
+
+        <select name="size" id="size-select">
+          <option value="">--Choose a Size--</option>
+          <option value="dog">4 M / 5.5 W</option>
+          <option value="cat">5 M / 6.5 W</option>
+          <option value="hamster">6 M / 7.5 W</option>
+          <option value="parrot">7 M / 8.5 W</option>
+          <option value="parrot">7.5 M / 9 W</option>
+          <option value="spider">8 M / 9.5 W</option>
+          <option value="spider">8.5 M / 10 W</option>
+          <option value="spider">9 M / 10.5 W</option>
+          <option value="spider">9.5 M / 11 W</option>
+          <option value="spider">10 M / 11.5 W</option>
+          <option value="spider">10.5 M / 12 W</option>
+          <option value="spider">11 M / 12.5 W</option>
+          <option value="spider">11.5 M / 13 W</option>
+          <option value="spider">12 M / 13.5 W</option>
+        </select>        
       </div>
 
       <div class="radio-button">
