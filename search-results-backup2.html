@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Specifies the document type as HTML5 -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+  <title>Grails4Me</title> <!-- Sets the title of the web page -->
+
+  <!-- Internal CSS styles for the page -->
+  <style>
+    /* Styles for the clickable article links */
+    .article-link {
+      display: block; /* Makes the entire element block-level for full-width clicks */
+      margin: 10px 0; /* Adds vertical spacing between articles */
+      padding: 10px; /* Adds space inside the article block */
+      background-color: #f9f9f9; /* Sets a light background color */
+      border: 1px solid #ddd; /* Adds a light gray border around the article */
+      text-decoration: none; /* Removes the underline from the link */
+      color: #333; /* Sets the text color to dark gray */
+      border-radius: 5px; /* Rounds the corners of the block */
+      transition: background-color 0.3s; /* Smoothly changes the background color on hover */
+    }
+    
+    /* Hover effect for the article links */
+    .article-link:hover {
+      background-color: #eaeaea; /* Changes the background color when the mouse is over the link */
+    }
+
+    .search-bar {
+      display: flex; /* Makes input and button align horizontally */
+      margin-top: 10px; /* Adds spacing above the search bar */
+    }
+    .search-bar input {
+      flex: 1; /* Makes the input field take up available space */
+      padding: 8px; /* Adds padding inside the input */
+      border: 1px solid #ddd; /* Adds a light border around the input */
+      border-radius: 5px 0 0 5px; /* Rounds the left corners */
+    }
+    .search-bar button {
+      padding: 8px 15px; /* Adds padding inside the button */
+      border: 1px solid #ddd; /* Matches the input's border */
+      background-color: #007BFF; /* Sets the button's background color */
+      color: white; /* Sets the button's text color */
+      border-radius: 0 5px 5px 0; /* Rounds the right corners */
+      cursor: pointer; /* Changes the cursor to a pointer on hover */
+    }
+    .search-bar button:hover {
+      background-color: #0056b3; /* Darkens the button on hover */
+    }
+
+    /* Wrapper for all iframe containers */
+    .iframe-wrapper {
+      display: flex; /* Enables flexbox layout */
+      flex-wrap: wrap; /* Allows items to wrap to the next row if they don't fit */
+      gap: 20px; /* Adds space between the elements */
+      justify-content: space-between; /* Distributes items evenly with space between */
+      margin: 0 auto; /* Centers the content */
+      max-width: 1200px; /* Optional: limits the width of the container */
+      padding: 10px; /* Optional: adds padding for spacing */
+    }
+
+    /* Style for the iframe containers */
+    .iframe-container {
+      display: block; /* Ensures iframe takes up full width */
+      width: 100%; /* Makes iframe stretch to 100% of the container */
+      height: 400px; /* Sets height of iframe */
+      border: none; /* Removes default iframe border */
+      margin-bottom: 20px; /* Adds space below each iframe */
+      box-sizing: border-box; /* Ensures padding/border are included in the width */
+    }
+
+    /* Style for the dynamic button */
+    .dynamic-button {
+      display: block; /* Makes the button a block element (on its own line) */
+      width: 100%; /* Full-width button */
+      padding: 10px; /* Adds padding inside the button */
+      text-align: center; /* Centers the text inside the button */
+      background-color: #007BFF; /* Button background color */
+      color: white; /* Button text color */
+      text-decoration: none; /* Removes underline from the link */
+      font-size: 16px; /* Font size for the button text */
+      border-radius: 5px; /* Rounds the corners of the button */
+      margin-bottom: 30px; /* Adds space below the button */
+    }
+
+    .dynamic-button:hover {
+      background-color: #0056b3; /* Darkens button on hover */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Main heading of the page -->
+  <h1>Grails4Me</h1>
+  
+  <!-- Clickable article with a search bar -->
+  <a href="product-details.html" class="article-link">
+    <h2>Find Grails...</h2> <!-- Title of the product -->
+    <p>Input SKU or Sneaker Name: </p> <!-- SKU information for the product -->
+
+</a>  
+    <!-- Search bar -->
+  <div class="search-bar">
+    <input type="text" id="skuInput" placeholder="Enter SKU..." /> <!-- Input field for SKU -->
+    <button type="button" onclick="searchSku()">Search</button> <!-- Search button -->
+  </div>
+
+  
+  <iframe class="iframe-container" id="previewIframe5" src="" title="URL Preview"></iframe>
+  <a id="dynamicButton5" class="dynamic-button" target="_blank">Go to Product</a>
+
+  <iframe class="iframe-container" id="previewIframe6" src="" title="URL Preview"></iframe>
+  <a id="dynamicButton6" class="dynamic-button" target="_blank">Go to Product</a>
+
+  <iframe class="iframe-container" id="previewIframe7" src="" title="URL Preview"></iframe>
+  <a id="dynamicButton7" class="dynamic-button" target="_blank">Go to Product</a>
+
+  <iframe class="iframe-container" id="previewIframe8" src="" title="URL Preview"></iframe>
+  <a id="dynamicButton8" class="dynamic-button" target="_blank">Go to Product</a>
+
+
+
+
+
+  <script>
+    // JavaScript function to handle the search
+    function searchSku() {
+      // Get the value of the input field
+      const sku = document.getElementById('skuInput').value.trim();
+      
+      // Check if the input is not empty
+      if (sku) {
+        // Construct the URL using the input value
+        const url = `https://stockx.com/search?s=${encodeURIComponent(sku)}`;
+        const url2 = `https://www.goat.com/search?query=${encodeURIComponent(sku)}`;
+        const url3 = `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(sku)}&_sacat=0&_from=R40&rt=nc&LH_AV=1`;
+        const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}`;
+        
+        const url5 = `https://undefeated.com/search?q=${encodeURIComponent(sku)}`;
+        const url6 = `https://sneakerpolitics.com/collections/shop?q=${encodeURIComponent(sku)}`;
+        const url7 = `https://shopnicekicks.com/search?q=${encodeURIComponent(sku)}`;
+        const url8 = `https://www.socialstatuspgh.com/search?q=${encodeURIComponent(sku)}`;
+        const url9 = `https://www.a-ma-maniere.com/search?q=${encodeURIComponent(sku)}`;
+        const url10 = `https://www.lapstoneandhammer.com/search?q=${encodeURIComponent(sku)}`;
+        const url11 = `https://artsandrecstore.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=${encodeURIComponent(sku)}`;
+
+        const iframe5 = document.getElementById('previewIframe5');
+        const iframe6 = document.getElementById('previewIframe6');
+        const iframe7 = document.getElementById('previewIframe7');
+        const iframe8 = document.getElementById('previewIframe8');
+
+
+        // Open the StockX URL in a new tab
+        //window.open(url, '_blank');
+        // Open the GOAT URL in a new tab
+        //window.open(url2, '_blank');
+        // Open the eBay URL in a new tab
+        //window.open(url3, '_blank');
+        // Open the Flight Club URL in a new tab
+        //window.open(url4, '_blank');
+
+
+
+        //Making dynamic URL button show and attached to the previewed link
+        const dynamicUrl5 = url5;
+        const dynamicUrl6 = url6;
+        const dynamicUrl7 = url7;
+        const dynamicUrl8 = url8;              
+        // Get the button element
+        const dynamicButton5 = document.getElementById('dynamicButton5');
+        const dynamicButton6 = document.getElementById('dynamicButton6');
+        const dynamicButton7 = document.getElementById('dynamicButton7');
+        const dynamicButton8 = document.getElementById('dynamicButton8');        
+        // Set the href attribute of the button
+        dynamicButton5.href = dynamicUrl5;
+        dynamicButton6.href = dynamicUrl6;
+        dynamicButton7.href = dynamicUrl7;
+        dynamicButton8.href = dynamicUrl8;
+        // Update the button text (optional)
+        dynamicButton5.textContent = `Undefeated: ${sku}`; 
+        dynamicButton6.textContent = `Sneaker Politics: ${sku}`;
+        dynamicButton7.textContent = `Shop Nice Kicks: ${sku}`;
+        dynamicButton8.textContent = `Social Status: ${sku}`;      
+        // Show the button
+        dynamicButton5.style.display = 'inline-block';
+        dynamicButton6.style.display = 'inline-block';
+        dynamicButton7.style.display = 'inline-block';
+        dynamicButton8.style.display = 'inline-block';
+
+        // JavaScript if else statment to update the iframe's URL
+        if (url5) {
+        // Validate the URL (basic check for http or https)
+        if (url5.startsWith('http://') || url5.startsWith('https://')) {
+          iframe5.src = url5; // Set the iframe's src attribute    
+          iframe6.src = url6;
+          iframe7.src = url7;
+          iframe8.src = url8;
+  
+        }
+        } else {
+          alert('Please enter a valid URL (starting with http:// or https://).');
+        }
+      } else {
+        alert('Please enter a URL.');
+      }
+        
+
+      
+      }
+      // else {
+      //  alert('Please enter a SKU to search.'); // Alert the user if the input is empty
+     // }
+   // }
+
+  
+
+
+  </script>
+
+
+
+</body>
+</html>
+
