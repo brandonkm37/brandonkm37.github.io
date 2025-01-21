@@ -5,7 +5,7 @@ git init
 
 
 Single Line for adding all files, commit, and push to repo. Steps will be sequential:
-git add . ; git commit -m "Changing radio buttons to appear as push buttons" ; git push
+git add . ; git commit -m "Adding URLs and additional buttons for Shop Sites" ; git push
 
 
 Test SKUs:
