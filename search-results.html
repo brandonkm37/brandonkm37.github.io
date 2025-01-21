@@ -281,6 +281,11 @@
         <a id="dynamicButton14" class="dynamic-button" target="_blank">Go to Product</a>
       </div>
 
+      <div class="iframe-button-container hidden">
+        <iframe class="iframe-container" id="previewIframe15" src="" title="URL Preview"></iframe>
+        <a id="dynamicButton15" class="dynamic-button" target="_blank">Go to Product</a>
+      </div>
+
     </div>
 
   </div>
@@ -324,6 +329,7 @@
           //const urlz = `https://denimexchangeusa.com/search?q=${encodeURIComponent(sku)}`;
           //const url = `https://cncpts.com/search?q=${encodeURIComponent(sku)}`;
           const url14 = `https://www.saintalfred.com/search?q=${encodeURIComponent(sku)}`;
+          const url15 = `https://www.thedarksideinitiative.com/search?q=${encodeURIComponent(sku)}`;
 
           // Creating a variable for preview frames 
           const iframe5 = document.getElementById('previewIframe5');
@@ -333,6 +339,7 @@
           const iframe12 = document.getElementById('previewIframe12');
           const iframe13 = document.getElementById('previewIframe13');
           const iframe14 = document.getElementById('previewIframe14');
+          const iframe15 = document.getElementById('previewIframe15');
 
           // Open the StockX URL in a new tab
           //window.open(url, '_blank');
@@ -360,7 +367,8 @@
             const dynamicUrl8 = url8;
             const dynamicUrl12 = url12;
             const dynamicUrl13 = url13;
-            const dynamicUrl14 = url14;              
+            const dynamicUrl14 = url14; 
+            const dynamicUrl15 = url15;              
             // Get the button element
             const dynamicButton5 = document.getElementById('dynamicButton5');
             const dynamicButton6 = document.getElementById('dynamicButton6');
@@ -368,7 +376,8 @@
             const dynamicButton8 = document.getElementById('dynamicButton8');  
             const dynamicButton12 = document.getElementById('dynamicButton12');
             const dynamicButton13 = document.getElementById('dynamicButton13');
-            const dynamicButton14 = document.getElementById('dynamicButton14');      
+            const dynamicButton14 = document.getElementById('dynamicButton14'); 
+            const dynamicButton15 = document.getElementById('dynamicButton15');      
             // Set the href attribute of the button
             dynamicButton5.href = dynamicUrl5;
             dynamicButton6.href = dynamicUrl6;
@@ -377,6 +386,7 @@
             dynamicButton12.href = dynamicUrl12;
             dynamicButton13.href = dynamicUrl13;
             dynamicButton14.href = dynamicUrl14;
+            dynamicButton15.href = dynamicUrl15;
             // Update the button text (optional)
             dynamicButton5.textContent = `Undefeated: ${sku}`; 
             dynamicButton6.textContent = `Sneaker Politics: ${sku}`;
@@ -384,7 +394,8 @@
             dynamicButton8.textContent = `Social Status: ${sku}`;    
             dynamicButton12.textContent = `Kith: ${sku}`;
             dynamicButton13.textContent = `Bodega: ${sku}`;
-            dynamicButton14.textContent = `Saint Alfred: ${sku}`;    
+            dynamicButton14.textContent = `Saint Alfred: ${sku}`;   
+            dynamicButton15.textContent = `Darkside: ${sku}`; 
             // Show the button
             dynamicButton5.style.display = 'inline-block';
             dynamicButton6.style.display = 'inline-block';
@@ -393,6 +404,7 @@
             dynamicButton12.style.display = 'inline-block';
             dynamicButton13.style.display = 'inline-block';
             dynamicButton14.style.display = 'inline-block';
+            dynamicButton15.style.display = 'inline-block';
 
             // JavaScript if else statment to update the iframe's URL
             if (url5) {
@@ -405,6 +417,7 @@
                 iframe12.src = url12;
                 iframe13.src = url13;
                 iframe14.src = url14;
+                iframe15.src = url15;
         
               }
             } 
@@ -431,7 +444,8 @@
             const dynamicUrl8 = url8;
             const dynamicUrl12 = url12;
             const dynamicUrl13 = url13;
-            const dynamicUrl14 = url14;              
+            const dynamicUrl14 = url14;  
+            const dynamicUrl15 = url15;            
             // Get the button element
             const dynamicButton5 = document.getElementById('dynamicButton5');
             const dynamicButton6 = document.getElementById('dynamicButton6');
@@ -439,7 +453,8 @@
             const dynamicButton8 = document.getElementById('dynamicButton8');  
             const dynamicButton12 = document.getElementById('dynamicButton12');
             const dynamicButton13 = document.getElementById('dynamicButton13');
-            const dynamicButton14 = document.getElementById('dynamicButton14');      
+            const dynamicButton14 = document.getElementById('dynamicButton14');    
+            const dynamicButton15 = document.getElementById('dynamicButton15');    
             // Set the href attribute of the button
             dynamicButton5.href = dynamicUrl5;
             dynamicButton6.href = dynamicUrl6;
@@ -448,6 +463,7 @@
             dynamicButton12.href = dynamicUrl12;
             dynamicButton13.href = dynamicUrl13;
             dynamicButton14.href = dynamicUrl14;
+            dynamicButton15.href = dynamicUrl15;
             // Update the button text (optional)
             dynamicButton5.textContent = `Undefeated: ${sku}`; 
             dynamicButton6.textContent = `Sneaker Politics: ${sku}`;
@@ -455,7 +471,8 @@
             dynamicButton8.textContent = `Social Status: ${sku}`;    
             dynamicButton12.textContent = `Kith: ${sku}`;
             dynamicButton13.textContent = `Bodega: ${sku}`;
-            dynamicButton14.textContent = `Saint Alfred: ${sku}`;    
+            dynamicButton14.textContent = `Saint Alfred: ${sku}`; 
+            dynamicButton15.textContent = `Darkside: ${sku}`;   
             // Show the button
             dynamicButton5.style.display = 'inline-block';
             dynamicButton6.style.display = 'inline-block';
@@ -464,6 +481,7 @@
             dynamicButton12.style.display = 'inline-block';
             dynamicButton13.style.display = 'inline-block';
             dynamicButton14.style.display = 'inline-block';
+            dynamicButton15.style.display = 'inline-block'
 
             // JavaScript if else statment to update the iframe's URL
             if (url5) {
@@ -476,6 +494,7 @@
                 iframe12.src = url12;
                 iframe13.src = url13;
                 iframe14.src = url14;
+                iframe15.src = url15;
         
               }
             } 
