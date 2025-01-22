@@ -5,7 +5,7 @@ git init
 
 
 Single Line for adding all files, commit, and push to repo. Steps will be sequential:
-git add . ; git commit -m "Adding size selector" ; git push
+git add . ; git commit -m "Starting calculator project" ; git push
 
 
 Test SKUs:
