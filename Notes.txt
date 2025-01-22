@@ -10,7 +10,7 @@ git add . ; git commit -m "Starting calculator project" ; git push
 
 Remoting in:
 git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>.git
-git remote set-url origin https://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@github.com/brandonkm37/brandonkm37.github.io
+git remote set-url origin https://tokenhere@github.com/brandonkm37/brandonkm37.github.io
 
 Test SKUs:
 IB5720-100
