@@ -15,24 +15,31 @@
 <body>
   <!-- Main container for the layout -->
   <div class="container">
-    <input type="text"/>
+    <input id="ask" type="text"/>
 
-    <select name="quickMath">
+    <select id="quickMath">
       <option value="+">+</option>
       <option value="-">-</option>
     </select>
     
-    <button name="amount" value="5">5</button>
-    <button name="amount" value="10">10</button>
-    <button name="amount" value="20">20</button>
-    <button name="amount" value="50">50</button>
-    <button name="amount" value="100">100</button>
-    <button name="amount" value="500">500</button>
-    <button name="amount" value="1000">1000</button>
+    <button id="amount" value="5">5</button>
+    <button id="amount" value="10">10</button>
+    <button id="amount" value="20">20</button>
+    <button id="amount" value="50">50</button>
+    <button id="amount" value="100">100</button>
+    <button id="amount" value="500">500</button>
+    <button id="amount" value="1000">1000</button>
     
   </div>
   <script>
-    function quickMath(){
+    function plusMinus(){
+      const quickMath = document.getElementById('quickMath').value.trim();
+      const amount = document.getElementById('amount').value.trim();
+      const ask = document.getElementById('ask').value.trim();
+
+      if  (quickMath === "+"){
+        ask = ask + amount;
+      }
 
     }
 
