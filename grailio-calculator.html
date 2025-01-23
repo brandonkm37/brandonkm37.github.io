@@ -34,12 +34,19 @@
   <script>
     function plusMinus(){
       const quickMath = document.getElementById('quickMath').value.trim();
-      const amount = document.getElementById('amount').value.trim();
-      const ask = document.getElementById('ask').value.trim();
+      let amount = document.getElementById('amount').value.trim();
+      let ask = document.getElementById('ask').value.trim();
 
       if  (quickMath === "+"){
         ask = ask + amount;
         ask.textContent = ask;
+        alert ('Did not add');
+      } else if (quickMath === "-"){
+        ask = ask - amount;
+        ask.textContent = ask;
+        alert ('Did not subtract');
+      } else {
+        alert ('Did not compute');
       }
 
     }
