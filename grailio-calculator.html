@@ -31,7 +31,7 @@
     <button id="amount" value="1000" onclick="plusMinus()">1000</button>
 
     <div>
-      <button id="add-item" onclick="addItem">Add Item</button>
+      <button id="add-item" onclick="addItem()">Add Item</button>
     </div>
     
   </div>
@@ -54,6 +54,11 @@
   
       // Update the input field with the new value
       askInput.value = ask;
+    }
+
+    function addItem() {
+      const leftElement = document.getElementsByClassName('left-container');
+      document.createElement(leftElement);
     }
   </script>
         
