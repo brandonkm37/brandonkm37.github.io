@@ -32,26 +32,25 @@
     
   </div>
   <script>
-    function plusMinus(){
-      const quickMath = document.getElementById('quickMath').value.trim();
-      let amount = document.getElementById('amount').value.trim();
-      let ask = document.getElementById('ask').value.trim();
-
-      if  (quickMath === "+"){
-        ask = ask + amount;
-        print(ask);
-        ask.textContent = ask;
-        alert ('Did not add');
-      } else if (quickMath === "-"){
-        ask = ask - amount;
-        ask.textContent = ask;
-        alert ('Did not subtract');
+    function plusMinus() {
+      const quickMath = document.getElementById('quickMath').value.trim(); // Get the selected operation
+      const amount = parseFloat(event.target.value); // Get the value of the button clicked (parsed to a number)
+      const askInput = document.getElementById('ask'); // Get the input field with id "ask"
+      let ask = parseFloat(askInput.value.trim()) || 0; // Parse the input value to a number, default to 0 if invalid
+  
+      // Perform the operation based on the selected quickMath option
+      if (quickMath === "+") {
+        ask += amount;
+      } else if (quickMath === "-") {
+        ask -= amount;
       } else {
-        alert ('Did not compute');
+        alert("Invalid operation");
+        return;
       }
-
+  
+      // Update the input field with the new value
+      askInput.value = ask;
     }
-
   </script>
         
 
