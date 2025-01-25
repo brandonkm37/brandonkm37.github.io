@@ -326,7 +326,6 @@
   <script>
       // JavaScript function to handle the search
       function searchSku() {
-        alert('Here');
         // Get the value of the input field
         const sku = document.getElementById('skuInput').value.trim();
         //const size = document.getElementById('size-select').value.trim();
@@ -335,6 +334,7 @@
 
         // Check if the input and size is not empty
         if (!sku){
+          alert('Here');
           alert('Please enter a SKU/Shoe Name along with a Size selection');
         }
           else if (sku) {
