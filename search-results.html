@@ -235,7 +235,7 @@
         <button type="button" onclick="searchSku()">Search</button> <!-- Search button -->
       </div>
 
-      <!-- Size Entry Selector -->
+      <!-- Size Entry Selector 
       <div class="select">
         <label for="size-select">Size:</label>
 
@@ -255,7 +255,7 @@
           <option value="11">11 M / 12.5 W</option>
           <option value="11.5">11.5 M / 13 W</option>
           <option value="12">12 M / 13.5 W</option>
-        </select>        
+        </select>     -->   
       </div>
 
       <div class="radio-button">
@@ -333,7 +333,7 @@
         const selectedOption = document.querySelector('input[name="searchType"]:checked').value;
 
         // Check if the input and size is not empty
-        if (!sku | !size){
+        if (!sku){
           alert('Please enter a SKU/Shoe Name along with a Size selection')
         }
           else if (sku) {
@@ -351,14 +351,14 @@
             const url4 = `https://www.flightclub.com/catalogsearch/result?query=${encodeURIComponent(sku)}&size_men=${encodeURIComponent(size)}`;         
             //Shopify URLs
             const url5 = `https://undefeated.com/search?q=${encodeURIComponent(sku)}`;
-            const url6 = `https://sneakerpolitics.com/collections/shop?q=${encodeURIComponent(sku)}#/filter:ss_filter_variant_available_sizes:${encodeURIComponent(size)}`;
-            const url7 = `https://shopnicekicks.com/search?gf_347511=${encodeURIComponent(size)}&q=${encodeURIComponent(sku)}`;
+            const url6 = `https://sneakerpolitics.com/collections/shop?q=${encodeURIComponent(sku)}`;
+            const url7 = `https://shopnicekicks.com/search?q=${encodeURIComponent(sku)}`;
             const url8 = `https://www.socialstatuspgh.com/search?q=${encodeURIComponent(sku)}`;
             //const url9 = `https://www.a-ma-maniere.com/search?q=${encodeURIComponent(sku)}`;
             //const url10 = `https://www.lapstoneandhammer.com/search?q=${encodeURIComponent(sku)}`;
             //const url11 = `https://artsandrecstore.com/search?type=product%2Carticle%2Cpage&options%5Bprefix%5D=last&q=${encodeURIComponent(sku)}`;
             const url12 = `https://kith.com/pages/search-results-page?q=${encodeURIComponent(sku)}`;
-            const url13 = `https://bdgastore.com/search?q=${encodeURIComponent(sku)}&options%5Bprefix%5D=last&filter.v.option.size=${encodeURIComponent(size)}&filter.v.price.gte=&filter.v.price.lte=&sort_by=relevance`;
+            const url13 = `https://bdgastore.com/search?q=${encodeURIComponent(sku)}`;
             //const urlz = `https://thepremierstore.com/search?q=${encodeURIComponent(sku)}`;
             //const urlz = `https://www.hometeamsea.com/search?q=${encodeURIComponent(sku)}`;
             //const urlz = `https://us.slamjam.com/search?q=${encodeURIComponent(sku)}`;
@@ -367,7 +367,7 @@
             //const url = `https://cncpts.com/search?q=${encodeURIComponent(sku)}`;
             const url14 = `https://www.saintalfred.com/search?q=${encodeURIComponent(sku)}`;
             //const urlz = `https://www.thedarksideinitiative.com/search?q=${encodeURIComponent(sku)}`;
-            const url15 = `https://www.soleclassics.com/search?q=${encodeURIComponent(sku)}&type=product&sort_by=relevance&filter.v.option.size=${encodeURIComponent(size)}`;
+            const url15 = `https://www.soleclassics.com/search?q=${encodeURIComponent(sku)}`;
             const url16 = `https://extrabutterny.com/search?q==${encodeURIComponent(sku)}`;
 
 
